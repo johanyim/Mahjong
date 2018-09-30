@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+
+    tools:context="MainActivity">
+
+    <ImageView
+        android:id="@+id/Gameboard"
+        android:layout_width="412dp"
+        android:layout_height="412dp"
+        android:layout_margin="0dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:rotation="0"
+        android:src="@drawable/gameboard"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/windMarker"
+        android:layout_width="412dp"
+        android:layout_height="412dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="wind marker arrow"
+        android:rotation="0"
+        android:translationX="0dp"
+        android:translationY="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/Gameboard"
+        app:layout_constraintEnd_toEndOf="@+id/playerRightText"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@+id/Gameboard"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/windmarker_d" />
+
+    <ImageView
+        android:id="@+id/dicePot"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="dice direction arrow"
+        android:visibility="visible"
+        android:background="@drawable/direction_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/playerDownButton"
+        app:layout_constraintEnd_toStartOf="@+id/playerRightButton"
+        app:layout_constraintStart_toEndOf="@+id/playerLeftButton"
+        app:layout_constraintTop_toBottomOf="@+id/playerUpButton"/>
+
+    <ImageView
+        android:id="@+id/diceA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="left dice"
+        android:cropToPadding="false"
+        android:paddingTop="0dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/dicePot"
+        app:layout_constraintTop_toTopOf="@+id/dicePot"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/diceB"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="middle dice"
+        android:cropToPadding="false"
+        app:layout_constraintEnd_toEndOf="@+id/dicePot"
+        app:layout_constraintTop_toTopOf="@+id/dicePot"
+        app:srcCompat="@drawable/dice2" />
+
+    <ImageView
+        android:id="@+id/diceC"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="right dice"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/dicePot"
+        app:layout_constraintStart_toStartOf="@+id/dicePot"
+        app:srcCompat="@drawable/dice3" />
+
+    <TextView
+        android:id="@+id/diceTotalNumber"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="44dp"
+        android:gravity="center"
+        android:text="12"
+        android:textSize="30sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/dicePot"
+        app:layout_constraintEnd_toEndOf="@+id/dicePot" />
+
+    <TextView
+        android:id="@+id/playerDownText"
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="playerDown"
+        android:textColor="@color/colorMoneyTextNeutral"
+        android:textSize="30sp"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="@+id/Gameboard"
+        app:layout_constraintEnd_toEndOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard" />
+
+    <TextView
+        android:id="@+id/playerRightText"
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_margin="14dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:rotation="270"
+        android:text="playerRight"
+        android:textColor="@color/colorMoneyTextNeutral"
+        android:textSize="30sp"
+        android:translationX="115dp"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="@id/Gameboard"
+        app:layout_constraintEnd_toEndOf="@+id/Gameboard"
+        app:layout_constraintRight_toRightOf="@+id/Gameboard"
+        app:layout_constraintTop_toTopOf="@id/Gameboard" />
+
+    <TextView
+        android:id="@+id/playerUpText"
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="playerUp"
+        android:textColor="@color/colorMoneyTextNeutral"
+        android:textSize="30sp"
+        app:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@+id/Gameboard" />
+
+    <TextView
+        android:id="@+id/playerLeftText"
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:rotation="90"
+        android:text="playerLeft"
+        android:textColor="@color/colorMoneyTextNeutral"
+        android:textSize="30sp"
+        android:translationX="-115dp"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="@+id/Gameboard"
+        app:layout_constraintLeft_toLeftOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@id/Gameboard" />
+
+    <Button
+        android:id="@+id/playerDownButton"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:layout_marginBottom="84dp"
+        android:background="@color/colorWinButtonBackground"
+        android:text="@string/win_button_text"
+        android:textColor="@color/colorWinButtonText"
+        app:layout_constraintBottom_toBottomOf="@+id/Gameboard"
+        app:layout_constraintEnd_toEndOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard" />
+
+    <Button
+        android:id="@+id/playerRightButton"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:background="@color/colorWinButtonBackground"
+        android:rotation="-90"
+        android:text="@string/win_button_text"
+        android:textColor="@color/colorWinButtonText"
+        app:layout_constraintBottom_toBottomOf="@id/Gameboard"
+        app:layout_constraintEnd_toEndOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@id/Gameboard" />
+
+    <Button
+        android:id="@+id/playerUpButton"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/colorWinButtonBackground"
+        android:rotation="180"
+        android:text="@string/win_button_text"
+        android:textColor="@color/colorWinButtonText"
+        app:layout_constraintEnd_toEndOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@id/Gameboard" />
+
+    <Button
+        android:id="@+id/playerLeftButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:background="@color/colorWinButtonBackground"
+        android:rotation="90"
+        android:text="@string/win_button_text"
+        android:textColor="@color/colorWinButtonText"
+        app:layout_constraintBottom_toBottomOf="@id/Gameboard"
+        app:layout_constraintStart_toStartOf="@id/Gameboard"
+        app:layout_constraintTop_toTopOf="@id/Gameboard" />
+
+    <Button
+        android:id="@+id/diceRollButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:width="50dp"
+        android:text="@string/roll_button_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gameboard" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="50dp"
+        android:text="@string/back_to_setup_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/endButton"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="244dp"
+        android:layout_marginStart="8dp"
+        android:width="50dp"
+        android:text="@string/endgame_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/drawButton"
+        android:layout_width="191dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorDrawButtonBackground"
+        android:text="@string/draw_button_text"
+        android:textColor="@color/colorDrawButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winButton"
+        app:layout_constraintTop_toBottomOf="@+id/diceRollButton" />
+
+    <Button
+        android:id="@+id/winButton"
+        android:layout_width="191dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorWinButtonBackground"
+        android:text="@string/win_button_text"
+        android:textColor="@color/colorWinButtonText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceRollButton" />
+
+    <TextView
+        android:id="@+id/chineseGameNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/chinese_game"
+        android:textColor="@color/colorExtraboardText"
+        android:textSize="24sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eastPositionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/east_position"
+        android:textColor="@color/colorExtraboardText"
+        android:textSize="24sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/gameNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/game_count"
+        android:textColor="@color/colorExtraboardText"
+        android:textSize="24sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/prevailingWindsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/prevailing_winds_count"
+        android:textColor="@color/colorExtraboardText"
+        android:textSize="24sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Mahjong Manager</string>
+
+    <string name="setup_title">Welcome to Mahjong Manager!</string>
+
+
+    <!--TODO Language-->
+    <!--General Language-->
+
+    <!--English-->
+
+    <!--<string name="down">Down</string>-->
+    <!--<string name="right">Right</string>-->
+    <!--<string name="up">Up</string>-->
+    <!--<string name="left">Left</string>-->
+
+    <!--<string name="east">East</string>-->
+    <!--<string name="south">South</string>-->
+    <!--<string name="west">West</string>-->
+    <!--<string name="north">North</string>-->
+
+    <!--Cantonese-->
+
+    <string name="down">下方</string>
+    <string name="right">右方</string>
+    <string name="up">上方</string>
+    <string name="left">左方</string>
+
+    <string name="east">東圈</string>
+    <string name="south">南圈</string>
+    <string name="west">西圈</string>
+    <string name="north">北圈</string>
+
+
+
+    <string name="setup_subtitle">Game Setup</string>
+
+    <string name="win_button_text">Win\n食糊</string>
+    <string name="loser_button_text">Loser\n出統</string>
+    <string name="zimo_button_text">ZiMo\n自摸</string>
+    <string name="roll_button_text">Roll dice\n擲骰子</string>
+    <string name="draw_button_text">Draw\n和局</string>
+
+    <string name="setup_start_button">Start 開始</string>
+
+    <string name="chinese_game_count">東圈第一局</string>
+    <string name="chinese_game_count_number">第</string>
+    <string name="chinese_game_count_game">局</string>
+
+    <string name="chinese_game">Game (現局)</string>
+    <string name="game_count">Played (完局) </string>
+    <string name="east_position">Banker (庄位) </string>
+    <string name="prevailing_winds_count">Wind (風位) </string>
+
+    <!--TODO Language-->
+    <string name="max_fan_counter">十二 Fan 番</string>
+    <string name="min_fan_counter">零 Fan 番</string>
+    <!--<string name="max_fan_counter">12 Fan 番</string>-->
+    <!--<string name="min_fan_counter">0 Fan 番</string>-->
+
+    <string name="fan_measure">Fan 番</string>
+
+    <string name="min_score_label">Min fan 最低番</string>
+    <string name="max_score_label">Max fan 最高番</string>
+    <string name="starting_amount_label">Starting number of chips 開始籌碼總數(每位)</string>
+    <string name="starting_amount_hint">1000 (Default)</string>
+    <string name="chip_value_label">Chip value 籌碼價值(每籌碼)</string>
+    <string name="chip_value_hint">1.0 (Default)</string>
+
+
+    <string name="score_popup_positive">OK </string>
+    <string name="score_popup_negative">Cancel</string>
+
+    <string name="score_input_screen_title">Scoring 成績</string>
+    <string name="score_input_screen_message">Input winner\'s Fan 輸入勝出番數</string>
+
+
+    <string name="game_number_popup_text">Game 游戲</string>
+    <string name="game_draw_popup_text">Draw 和局</string>
+
+    <string name="back_to_setup_button_text">New Game 新局</string>
+    <string name="endgame_button_text">End Game 結束</string>
+
+
+    <string name="back_to_setup_message">Warning: By creating a new game you are deleting the progress of the current game.\nAre you sure you want to continue?</string>
+    <string name="endgame_message">Warning: By ending the game you will lose the progress of the current game.\nAre you sure you want to proceed to the end game statistics?</string>
+
+
+    <!--End Game Activity-->
+
+    <string name="end_statistics_title">End Game Statistics</string>
+    <string name="end_new_game_button_text">New Game 新局</string>
+    <string name="end_new_game_message">Finish post-game review and start a new game?</string>
+    <string name="end_min_score_text">Min fan: </string>
+    <string name="end_max_score_text">Max fan: </string>
+    <string name="end_starting_amount_text">Starting number of chips: </string>
+    <string name="end_chip_value_text">Chip value: </string>
+    <string name="end_games_played_text">Games Played: </string>
+
+
+</resources>

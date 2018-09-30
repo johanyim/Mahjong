@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SetupActivity">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:id="@+id/setupTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/setup_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="57dp" />
+
+    <TextView
+        android:id="@+id/setupSubtitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/setup_subtitle"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/end_minScoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/min_score_label"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/minScoreSlider"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/minScoreCounter"
+            android:layout_width="219dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/min_fan_counter"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/end_maxScoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_score_label"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/maxScoreSlider"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/maxScoreCounter"
+            android:layout_width="219dp"
+            android:layout_height="49dp"
+            android:layout_weight="1"
+            android:text="@string/max_fan_counter"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/end_startingAmountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/starting_amount_label"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/startingAmountInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/starting_amount_hint"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/end_chipValueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chip_value_label"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/chipValueInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/chip_value_hint"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setup_start_button" />
+
+</LinearLayout>

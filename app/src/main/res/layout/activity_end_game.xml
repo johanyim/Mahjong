@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".EndGameActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="23dp" />
+
+    <TextView
+        android:id="@+id/statisticsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/end_statistics_title"
+        android:textColor="@color/colorEndGameText"
+        android:textSize="35sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="405dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="412dp"
+                android:layout_height="412dp"
+                app:srcCompat="@drawable/endboard"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/playerUpEndScoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="top|center_horizontal"
+                android:rotation="180"
+                android:text="[Up Player]\n[Score]"
+                android:textColor="@color/colorEndGameText"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/playerRightEndScoreText"
+                android:layout_width="421dp"
+                android:layout_height="128dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal|center|clip_vertical"
+                android:rotation="270"
+                android:text="[Right Player ]\n[Score]"
+                android:textColor="@color/colorEndGameText"
+                android:textSize="30sp"
+                android:translationX="150dp"
+                app:layout_constraintBottom_toTopOf="@+id/playerDownEndScoreText"
+                app:layout_constraintTop_toBottomOf="@+id/playerUpEndScoreText"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/playerLeftEndScoreText"
+                android:layout_width="409dp"
+                android:layout_height="128dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:rotation="90"
+                android:scrollHorizontally="true"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:text="[Left Player]\n[Score]"
+                android:textColor="@color/colorEndGameText"
+                android:textSize="30sp"
+                android:translationX="-150dp"
+                app:layout_constraintBottom_toTopOf="@+id/playerDownEndScoreText"
+                app:layout_constraintTop_toBottomOf="@+id/playerUpEndScoreText"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/playerDownEndScoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="bottom|center_horizontal"
+                android:text="[Down Player]\n[Score]"
+                android:textColor="@color/colorEndGameText"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/end_minScoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/end_min_score_text"
+            android:textColor="@color/colorEndGameText"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/end_maxScoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/end_min_score_text"
+            android:textColor="@color/colorEndGameText"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/end_startingAmountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/end_starting_amount_text"
+        android:textColor="@color/colorEndGameText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/end_chipValueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/end_chip_value_text"
+        android:textColor="@color/colorEndGameText"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/end_gamesPlayedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/end_games_played_text"
+        android:textColor="@color/colorEndGameText"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/end_new_game_button_text" />
+
+</LinearLayout>

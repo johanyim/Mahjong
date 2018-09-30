@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#254b1e</color>
+    <color name="colorPrimaryDark">#082306</color>
+    <color name="colorAccent">#77bf6b</color>
+
+    <color name="colorExtraboardText">#2d1b0a</color>
+
+    <color name="colorMoneyTextWinning">#51ad41</color>
+    <color name="colorMoneyTextNeutral">#dcb740</color>
+    <color name="colorMoneyTextLosing">#f43b3c</color>
+
+    <color name="colorWinButtonText">#9b6128</color>
+    <color name="colorWinButtonBackground">#ef9840</color>
+
+    <color name="colorDrawButtonText">#c9960a</color>
+    <color name="colorDrawButtonBackground">#563513</color>
+
+    <color name="colorZimoButtonText">#003004</color>
+    <color name="colorZimoButtonBackground">#00aa0f</color>
+
+    <color name="colorLoseButtonText">#470001</color>
+    <color name="colorLoseButtonBackground">#ea0000</color>
+
+    <color name="colorEndGameText">#ffb854</color>
+    <color name="colorEndTextWinning">#51ad41</color>
+    <color name="colorEndTextNeutral">#dcb740</color>
+    <color name="colorEndTextLosing">#c62222</color>
+
+
+</resources>
