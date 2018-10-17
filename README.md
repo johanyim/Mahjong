@@ -7,4 +7,4 @@ Mahjong Manager by Johan Yim
 
 Contact: 17yimjy1@kgv.edu.hk
 
-
+GitHub Repository Link here: https://github.com/johanyim/Mahjong
