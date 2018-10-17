@@ -1,7 +1,10 @@
+
 # Mahjong Manager for Android
 
-IB HL Computer Science IA
+This is the app I have developed for my IB Computer Science Internal Assessment
 
-by Johan Yim
+Mahjong Manager by Johan Yim
 
 Contact: 17yimjy1@kgv.edu.hk
+
+
