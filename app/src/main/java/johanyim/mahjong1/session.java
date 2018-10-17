@@ -53,7 +53,8 @@ public class session implements Serializable {
     public int getPlayerXWinningChips(int x){
         return getPlayerXChips(x) - getStartingAmount();
     } //returns the specified player's chip's difference from the starting amount
-
+    
+    //This setter is only used in the chinese version of the app
     public void setChineseGameNumber(int chineseGameNumber) {
         this.chineseGameNumber = chineseGameNumber;
     }
@@ -150,36 +151,41 @@ public class session implements Serializable {
         }
     }
 
-//    public void winPay(int amount, int fromPlayer, int toPlayer ){
-//
-//        if(fromPlayer != toPlayer){
-//            this.p[fromPlayer].subtractChips(amount*2);
-//            this.p[toPlayer].addChips(amount*2);        //the amount given to the winning player is doubled if won by discard (as stated in the rules)
-//
-//        }else{                                          //when the parameter for toPlayer is the same as fromPlayer, it denotes that the winning player obtained ZiMo
-//            for(int i = 0 ; i < p.length ; i++){
-//                this.p[i].subtractChips(amount);
-//                this.p[toPlayer].addChips(amount);
-//            }
-//        }
-//
-//        if(toPlayer != eastPos){
-//            this.nextPosition();
-//        }
-//    }// does not convert fan to amount automatically
 
-//
-//    public void winPay(int amount, int fromPlayer, int toPlayer){
-//        if(fromPlayer == toPlayer){ //if the winner and loser are the same, then the program knows it was a ZiMo
-//            for(int i = 0 ; i < p.length ; i++){    //looping through all the players
-//                this.p[i].subtractChips(amount);    //subtracts the amount from every player including the winner
-//                this.p[toPlayer].addChips(amount);  //adds 4 times the amount to the winner, regaining the amount subtracted earlier
-//            }
-//        }else{
-//            this.p[fromPlayer].subtractChips(amount*2);
-//            this.p[toPlayer].addChips(amount*2);        //the amount given to the winning player is doubled if won by discard (as stated in the rules)
-//        }
-//    }
+    //This is some discarded code. I found a more efficient way to handle the transactions.
+
+    /*
+    public void winPay(int amount, int fromPlayer, int toPlayer ){
+
+        if(fromPlayer != toPlayer){
+            this.p[fromPlayer].subtractChips(amount*2);
+            this.p[toPlayer].addChips(amount*2);        //the amount given to the winning player is doubled if won by discard (as stated in the rules)
+
+        }else{                                          //when the parameter for toPlayer is the same as fromPlayer, it denotes that the winning player obtained ZiMo
+            for(int i = 0 ; i < p.length ; i++){
+                this.p[i].subtractChips(amount);
+                this.p[toPlayer].addChips(amount);
+            }
+        }
+
+        if(toPlayer != eastPos){
+            this.nextPosition();
+        }
+    }// does not convert fan to amount automatically
+
+
+    public void winPay(int amount, int fromPlayer, int toPlayer){
+        if(fromPlayer == toPlayer){ //if the winner and loser are the same, then the program knows it was a ZiMo
+            for(int i = 0 ; i < p.length ; i++){    //looping through all the players
+                this.p[i].subtractChips(amount);    //subtracts the amount from every player including the winner
+                this.p[toPlayer].addChips(amount);  //adds 4 times the amount to the winner, regaining the amount subtracted earlier
+            }
+        }else{
+            this.p[fromPlayer].subtractChips(amount*2);
+            this.p[toPlayer].addChips(amount*2);        //the amount given to the winning player is doubled if won by discard (as stated in the rules)
+        }
+    }
+    */
 
     public void winPayFan(int fan, int winningPlayer, int losingPlayer){
 
@@ -225,26 +231,29 @@ public class session implements Serializable {
         }else{
             return chipArray[fan];
         }
-        //TODO Not sure which one is more efficient, so I'll keep both just in case.
 
-//        int chips = 0;
-//        try{
-//            chips = this.chipArray[fan];
-//        }
-//        catch(ArrayIndexOutOfBoundsException e){
-//            if(fan < 0){
-//                chips = 0;
-//            }else{
-//                chips = this.chipArray[maxScore];
-//            }
-//        }
-//        finally {
-//            return chips;
-//        }
+        //This was another method using try-catch blocks, but it looks like it wasn't necessary
+
+        /*
+        int chips = 0;
+        try{
+            chips = this.chipArray[fan];
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            if(fan < 0){
+                chips = 0;
+            }else{
+                chips = this.chipArray[maxScore];
+            }
+        }
+        finally {
+            return chips;
+        }
+        */
     }
 
 
-//------------------------Chinese game number (for the chinese numerals in the game count)-----------------------//
+//------------------------Chinese game number (for the chinese numerals in the game count) [ONLY USED IN THE CHINESE VERSION OF THE APP]-----------------------//
 
     public int getChineseGameNumber() {
         return chineseGameNumber;

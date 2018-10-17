@@ -177,6 +177,11 @@ public class MainActivity extends AppCompatActivity {
         final Button[] finalPlayerButtons = playerButtons; //the array must be declared final to be used
 
 
+        //Using a nested loop here. First I'll set all the buttons to the default state
+        //Then, if one button is pressed, all the other buttons become red say lose
+        //The button which was pressed will say Zimo
+        //After the input is given in the popup dialog, the buttons will hide, and are only shown after the user presses the win button.
+
         for(int i = 0; i < playerButtons.length; i++){
 
             finalPlayerButtons[i].setText(getResources().getString( R.string.win_button_text));
@@ -191,13 +196,7 @@ public class MainActivity extends AppCompatActivity {
                     game.setWinner(finalI);//setting winner
                     vibrate(100);
 
-                    //https://stackoverflow.com/questions/31891481/using-a-loop-to-set-the-buttons-onclicklistener
-                    //clever!
-
                     //change the remaining ones to different buttons for losing. Might not need to set visibility to gone
-                    //otherPlayers.setText("Loser");
-
-
                     //iterate through the players
                     for(int j = 0; j < finalPlayerButtons.length; j++) {
                         final int finalJ = j;
@@ -228,9 +227,7 @@ public class MainActivity extends AppCompatActivity {
                                 //allow player to choose their score
 
 
-
                                 //from https://developer.android.com/guide/topics/ui/dialogs
-
 
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                 builder.setTitle(
