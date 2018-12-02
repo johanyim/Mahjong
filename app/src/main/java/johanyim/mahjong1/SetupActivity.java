@@ -31,10 +31,10 @@ public class SetupActivity extends AppCompatActivity {
     }
 
 
+    //Different variants of Mahjong scoring
+
     int[] chipArray = {0,1,2,4,8,16,24,32,48,64,96,128,192}; //fun game
-
-//    int[] chipArray = {0,1,2,4,8,16,32,64,128,256,512,1024,2048}; //gambling
-
+//    int[] chipArray = {0,1,2,4,8,16,32,64,128,256,512,1024,2048}; //gambling high stakes
 //    int[] chipArray = {1,3,9,27,81,243,729,2187,6561,19683,59049};
 
 
@@ -44,7 +44,6 @@ public class SetupActivity extends AppCompatActivity {
     int maxScore = 12;
     Double chipValue = 1.0;
     int startingAmount = 1000;
-
 
 
     //exiting the app
@@ -119,7 +118,7 @@ public class SetupActivity extends AppCompatActivity {
         });
     }
 
-    private int getStartingAmountInput(){
+    private int getStartingAmountInput(){ //This function gets the value inside the box where the user inputs the preferred starting amount
 
         EditText startingAmountBox = (EditText) findViewById(R.id.startingAmountInputBox);
 
@@ -131,11 +130,10 @@ public class SetupActivity extends AppCompatActivity {
             startingAmountInt = 1000;
         }
 
-
         return startingAmountInt;
     }
 
-    private double getChipValueInput(){
+    private double getChipValueInput(){ //This function gets the value inside the box where the user inputs the preferred chip value
 
         EditText chipValueBox = (EditText) findViewById(R.id.chipValueInputBox);
 
@@ -149,12 +147,6 @@ public class SetupActivity extends AppCompatActivity {
 
         return chipValueDouble;
     }
-
-
-
-
-
-
 
     private void outputMessage(String message){
         Context context = getApplicationContext();

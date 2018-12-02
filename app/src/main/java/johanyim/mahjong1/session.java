@@ -53,7 +53,7 @@ public class session implements Serializable {
     public int getPlayerXWinningChips(int x){
         return getPlayerXChips(x) - getStartingAmount();
     } //returns the specified player's chip's difference from the starting amount
-    
+
     //This setter is only used in the chinese version of the app
     public void setChineseGameNumber(int chineseGameNumber) {
         this.chineseGameNumber = chineseGameNumber;
@@ -102,17 +102,27 @@ public class session implements Serializable {
     }
 
 
+
+
     //------------------------------------Constructor---------------------------------------------//
 
-    public session(int[] chipArray, int minScore, int maxScore, double chipValue, int startingAmount) {
+    public session(
+        int[] chipArray,
+        int minScore,
+        int maxScore,
+        double chipValue,
+        int startingAmount)
+    {
+
         this.chipArray = chipArray;
         this.minScore = minScore;
         this.maxScore = maxScore;
-
-        configureChipArray();
         this.chipValue = chipValue;
         this.startingAmount = startingAmount;
+
         this.p = createPlayers(4);
+
+        configureChipArray();
     }
 
 
@@ -125,11 +135,9 @@ public class session implements Serializable {
         }
         return playerList;
     }
-
     public int getPlayerChips(int playerNum){
         return p[playerNum].getChips();
     }
-
     private void nextPosition(){
         this.eastPos = (this.eastPos + 1) % 4; //modulo operator to ensure that the east position is within the four directions
 
@@ -138,8 +146,6 @@ public class session implements Serializable {
             resetChineseGameNumber();//only reset the chinese game number after the game has made 1 full cycle
         }
     }
-
-
 
     private void configureChipArray(){
         for(int i = 0 ; i < this.chipArray.length ; i++){

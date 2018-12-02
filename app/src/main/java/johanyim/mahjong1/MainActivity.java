@@ -20,14 +20,12 @@ import android.widget.Toast;
 import android.os.Vibrator;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //AppCompatActivity inheritance to allow android application development functions
 
 
 
     ImageView[] diceOnScreen = new ImageView[3];//an array of the IDs for each dice on screen
     int[] dicePicArray = new int[6];//an array of each dice face as pictures
-
-
 
     ImageView dicePot; //the ImageView of the direction arrow seen on screen
 
@@ -278,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
                                                 }
                                                 outputMessage(finalMessage);
                                             }
-                                            updatePlayerButtons();
+                                            updatePlayerButtons(); //Recursive call
                                             hidePlayerButtons();
                                             showWinDrawButtons();
 
@@ -550,6 +548,8 @@ public class MainActivity extends AppCompatActivity {
         else if(directionInt == 3){return getResources().getString( R.string.north);}
 
         else{return "N/A";}
+
+
 
     }
 

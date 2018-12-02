@@ -1,24 +1,27 @@
+
+
+
 package johanyim.mahjong1;
+import java.io.Serializable;
 
-        import java.io.Serializable;
+public class player implements Serializable{ //The Serializable Java Interface is used so that the player object can be passed to different activities
 
-public class player implements Serializable{
+    //Variables
 
-    //attributes
-    int chips;
+    private int chips; //Declared private so that this variable is only accessible through public methods
+    //private int position;
 
-    public player(int chips) {
+    public player(int chips) { //This constructor allows the program to assign a specific number of chips upon initialization
         this.chips = chips;
-
     }
 
     public int getChips() {
         return this.chips;
     }
 
-    public void setChips(int chips) {
+    private void setChips(int chips) {
         this.chips = chips;
-    }
+    } //Mutation function is encapsulated because the only functions to alter the chips are addChips() and subtractChips()
 
     public void addChips(int amount) {
         this.setChips(this.chips + amount);

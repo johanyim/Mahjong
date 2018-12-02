@@ -36,8 +36,6 @@ public class EndGameActivity extends AppCompatActivity {
         textMap.put(R.id.end_chipValueText,         getResources().getString(R.string.end_chip_value_text) + game.getChipValue());
         textMap.put(R.id.end_gamesPlayedText,       getResources().getString(R.string.end_games_played_text) + game.getGamesPlayed());
         setupAll();
-
-
     }
 
     @Override
